@@ -383,9 +383,9 @@ secretVolumes: []
 # Enable/disable migration jobs, and set annotations for them
 migrations:
   # Enable pre-upgrade migrations (run "kong migrations up")
-  preUpgrade: true
+  preUpgrade: false
   # Enable post-upgrade migrations (run "kong migrations finish")
-  postUpgrade: true
+  postUpgrade: false
   # Annotations to apply to migrations job pods
   # By default, these disable service mesh sidecar injection for Istio and Kuma,
   # as the sidecar containers do not terminate and prevent the jobs from completing
