@@ -2,7 +2,7 @@
   kind: Deployment
   metadata:
     name: konga
-    namespace: kong
+    namespace: yb
   spec:
     replicas: 1
     selector:
