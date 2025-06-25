@@ -124,7 +124,7 @@ admin:
   # Enable creating a Kubernetes service for the admin API
   # Disabling this is recommended for most ingress controller configurations
   # Enterprise users that wish to use Kong Manager with the controller should enable this
-  enabled: false
+  enabled: true
   type: NodePort
   # To specify annotations or labels for the admin service, add them to the respective
   # "annotations" or "labels" dictionaries below.
@@ -135,7 +135,7 @@ admin:
   http:
     # Enable plaintext HTTP listen for the admin API
     # Disabling this and using a TLS listen only is recommended for most configuration
-    enabled: false
+    enabled: true
     servicePort: 8001
     containerPort: 8001
     # Set a nodePort which is available if service type is NodePort
@@ -154,8 +154,7 @@ admin:
     # Set a nodePort which is available if service type is NodePort
     # nodePort: 32443
     # Additional listen parameters, e.g. "reuseport", "backlog=16384"
-    parameters:
-    - http2
+    parameters: []
 
   # Kong admin ingress settings. Useful if you want to expose the Admin
   # API of Kong outside the k8s cluster.
@@ -239,7 +238,7 @@ cluster:
 proxy:
   # Enable creating a Kubernetes service for the proxy
   enabled: true
-  type: LoadBalancer
+  type: NodePort
   # To specify annotations or labels for the proxy service, add them to the respective
   # "annotations" or "labels" dictionaries below.
   annotations: {}
@@ -570,7 +569,7 @@ ingressController:
 # https://github.com/Kong/charts/blob/main/charts/kong/FAQs.md#kong-fails-to-start-after-helm-upgrade-when-postgres-is-used-what-do-i-do
 
 postgresql:
-  enabled: false
+  enabled: true
   auth:
     username: kong
     database: kong
