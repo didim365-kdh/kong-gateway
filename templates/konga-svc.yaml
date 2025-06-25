@@ -2,7 +2,7 @@
   kind: Service
   metadata:
     name: konga
-    namespace: kong
+    namespace: yb
   spec:
     type: NodePort
     ports:
