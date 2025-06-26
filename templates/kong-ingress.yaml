@@ -26,5 +26,5 @@ spec:
               service:
                 name: konga
                 port:
-                  number: 80
+                  number: 1337
 
