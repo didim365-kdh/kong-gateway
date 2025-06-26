@@ -1,0 +1,8 @@
+apiVersion: configuration.konghq.com/v1
+kind: KongIngress
+metadata:
+  name: kong-ingress
+  namespace: yb
+upstream:
+  hash_on: ip
+  slots: 10000
