@@ -17,7 +17,8 @@ metadata:
 spec:
   ingressClassName: kong
   rules:
-    - http:
+  - host: www.konga.com
+      http:
         paths:
           - path: /
             pathType: Prefix
