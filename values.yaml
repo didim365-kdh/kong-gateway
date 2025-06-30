@@ -572,6 +572,7 @@ postgresql:
   enabled: true
   auth:
     username: kong
+    password: test1234
     database: kong
   image:
     # use postgres < 14 until is https://github.com/Kong/kong/issues/8533 resolved and released
